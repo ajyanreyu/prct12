@@ -43,6 +43,8 @@
 </nav>
 
 
+  
+
   <div id="file-metadata">
     <nav id="file-list-section" class="section">
   <h3 class="section-header">Defined In</h3>
@@ -59,10 +61,11 @@
     <nav id="parent-class-section" class="section">
   <h3 class="section-header">Parent</h3>
   
-  <p class="link">Matriz
+  <p class="link"><a href="Matriz.html">MatrixExpansion::Matriz</a>
   
 </nav>
 
+    
     
     <!-- Method Quickref -->
 <nav id="method-list-section" class="section">
@@ -70,29 +73,29 @@
 
   <ul class="link-list">
     
-    <li><a href="#method-c-new">::new</a>
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
     
-    <li><a href="#method-c-read">::read</a>
+    <li ><a href="#method-c-read">::read</a>
     
-    <li><a href="#method-i-2A">#*</a>
+    <li ><a href="#method-i-2A">#*</a>
     
-    <li><a href="#method-i-2B">#+</a>
+    <li ><a href="#method-i-2B">#+</a>
     
-    <li><a href="#method-i-2D">#-</a>
+    <li ><a href="#method-i-2D">#-</a>
     
-    <li><a href="#method-i-get">#get</a>
+    <li ><a href="#method-i-get">#get</a>
     
-    <li><a href="#method-i-max">#max</a>
+    <li ><a href="#method-i-max">#max</a>
     
-    <li><a href="#method-i-min">#min</a>
+    <li ><a href="#method-i-min">#min</a>
     
-    <li><a href="#method-i-porcentaje_nulos">#porcentaje_nulos</a>
+    <li ><a href="#method-i-porcentaje_nulos">#porcentaje_nulos</a>
     
-    <li><a href="#method-i-set_valores_fracc">#set_valores_fracc</a>
+    <li ><a href="#method-i-set_valores_fracc">#set_valores_fracc</a>
     
-    <li><a href="#method-i-set_valores_num">#set_valores_num</a>
+    <li ><a href="#method-i-set_valores_num">#set_valores_num</a>
     
-    <li><a href="#method-i-to_s">#to_s</a>
+    <li ><a href="#method-i-to_s">#to_s</a>
     
   </ul>
 </nav>
@@ -111,7 +114,13 @@
   
     <li class="file"><a href="../LICENSE.html">LICENSE</a>
   
+    <li class="file"><a href="../README_md.html">README</a>
+  
     <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../matrix_expansion_gemspec.html">matrix_expansion.gemspec</a>
   
   </ul>
 </nav>
@@ -120,6 +129,8 @@
   <h3 class="section-header">Class and Module Index</h3>
 
   <ul class="link-list">
+  
+    <li><a href="../Fraccion.html">Fraccion</a>
   
     <li><a href="../MatrixExpansion.html">MatrixExpansion</a>
   
@@ -130,8 +141,6 @@
     <li><a href="../MatrixExpansion/Matriz_Densa.html">MatrixExpansion::Matriz_Densa</a>
   
     <li><a href="../MatrixExpansion/Matriz_Dispersa.html">MatrixExpansion::Matriz_Dispersa</a>
-  
-    <li><a href="../Fraccion.html">Fraccion</a>
   
     <li><a href="../Object.html">Object</a>
   
@@ -173,13 +182,21 @@
         <div class="method-heading">
           <span class="method-name">new</span><span
             class="method-args">(n, m)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Crea una matriz anidando array e inicializa los valores a 0</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Matriz.html#method-c-new">MatrixExpansion::Matriz.new</a>
+            </div>
           
 
           
@@ -209,7 +226,9 @@
         <div class="method-heading">
           <span class="method-name">read</span><span
             class="method-args">(array)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -218,12 +237,13 @@
           <p>Método que lee el array que se le pasa por parámetro y devuelve una matriz
 densa iniciaizada con los valores del array.</p>
           
+          
 
           
           <div class="method-source-code" id="read-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_densa.rb, line 218</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">array</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">array</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Tipo invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">array</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
     
     <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">array</span>.<span class="ruby-identifier">size</span>(), <span class="ruby-identifier">array</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">size</span>())
     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
@@ -254,7 +274,9 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">*</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -262,30 +284,31 @@ densa iniciaizada con los valores del array.</p>
           
           <p>Producto de matrices densas</p>
           
+          
 
           
           <div class="method-source-code" id="2A-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_densa.rb, line 160</span>
-<span class="ruby-keyword">def</span> *(<span class="ruby-identifier">other</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'El argumento debe ser una matriz'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;El argumento debe ser una matriz&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
     
     <span class="ruby-comment">#Si el argumento es un numero</span>
     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>)
         <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-ivar">@col</span>)
         <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
             <span class="ruby-ivar">@col</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
-                <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] * <span class="ruby-identifier">other</span>
+                <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>
             <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">end</span>
     <span class="ruby-comment">#Si el argumento es una matriz</span>
     <span class="ruby-keyword">else</span>
-        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible (A.fil == B.col)'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Matriz no compatible (A.fil == B.col)&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span>
         
         <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>)
         <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
             <span class="ruby-ivar">@col</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
                 (<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@col</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)).<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">acc</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
-                    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">acc</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">k</span>] * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>))
+                    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">acc</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">k</span>] <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>))
                 <span class="ruby-keyword">end</span>
             <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">end</span>
@@ -308,7 +331,9 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">+</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -316,13 +341,14 @@ densa iniciaizada con los valores del array.</p>
           
           <p>Suma de matrices densas</p>
           
+          
 
           
           <div class="method-source-code" id="2B-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_densa.rb, line 131</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'El argumento debe ser una matriz'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Las matrices deben ser del mismo tamano'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;El argumento debe ser una matriz&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Las matrices deben ser del mismo tamano&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>
     
     <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-ivar">@col</span>)
     <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
@@ -347,7 +373,9 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">-</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -355,13 +383,14 @@ densa iniciaizada con los valores del array.</p>
           
           <p>Resta de matrices densas</p>
           
+          
 
           
           <div class="method-source-code" id="2D-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_densa.rb, line 145</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'El argumento debe ser una matriz'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Las matrices deben ser del mismo tamano'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;El argumento debe ser una matriz&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Las matrices deben ser del mismo tamano&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>
     
     <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-ivar">@col</span>)
     <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
@@ -386,13 +415,16 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">get</span><span
             class="method-args">(i,j)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Comprueba que se accede dentro de la matriz y devuelve el valor</p>
+          
           
 
           
@@ -420,13 +452,16 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">max</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Calcula el maximo elemento de la matriz</p>
+          
           
 
           
@@ -459,13 +494,16 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">min</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Calcula el minimo elemento de la matriz</p>
+          
           
 
           
@@ -498,7 +536,9 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">porcentaje_nulos</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -506,12 +546,13 @@ densa iniciaizada con los valores del array.</p>
           
           <p>Calcula el porcentaje de valores nulos</p>
           
+          
 
           
           <div class="method-source-code" id="porcentaje_nulos-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_densa.rb, line 93</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">porcentaje_nulos</span>
-  <span class="ruby-identifier">total</span> = <span class="ruby-ivar">@fil</span>*<span class="ruby-ivar">@col</span>
+  <span class="ruby-identifier">total</span> = <span class="ruby-ivar">@fil</span><span class="ruby-operator">*</span><span class="ruby-ivar">@col</span>
   <span class="ruby-identifier">no_nulos</span> = <span class="ruby-value">0</span>
   
   <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
@@ -544,13 +585,16 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">set_valores_fracc</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Da valores fraccionales a la matriz densa</p>
+          
           
 
           
@@ -586,13 +630,16 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">set_valores_num</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Da valores numericos a la matriz densa</p>
+          
           
 
           
@@ -626,13 +673,16 @@ densa iniciaizada con los valores del array.</p>
         <div class="method-heading">
           <span class="method-name">to_s</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Muestra la matriz densa</p>
+          
           
 
           
@@ -671,7 +721,7 @@ densa iniciaizada con los valores del array.</p>
 
 <footer id="validator-badges">
   <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
   <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
 </footer>
 

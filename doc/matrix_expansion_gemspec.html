@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>module MatrixExpansion - RDoc Documentation</title>
+<title>matrix_expansion.gemspec - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body id="top" class="module">
+<body class="file">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -44,44 +44,6 @@
 
 
   
-
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>lib/matrix_expansion.rb
-    <li>lib/matrix_expansion/matrix.rb
-    <li>lib/matrix_expansion/matrix_densa.rb
-    <li>lib/matrix_expansion/matrix_dispersa.rb
-    <li>lib/matrix_expansion/matriz_DSL.rb
-    <li>lib/matrix_expansion/version.rb
-    <li>spec/matrix_spec.rb
-    <li>test/tc_matrix.rb
-  </ul>
-</nav>
-
-    
-  </div>
-
-  <div id="class-metadata">
-    
-    
-    <!-- Included Modules -->
-<nav id="includes-section" class="section">
-  <h3 class="section-header">Included Modules</h3>
-
-  <ul class="link-list">
-  
-  
-    <li><span class="include">Enumerable</span>
-  
-  
-  </ul>
-</nav>
-
-    
-    
-  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -133,43 +95,31 @@
   </div>
 </nav>
 
-<div id="documentation">
-  <h1 class="module">module MatrixExpansion</h1>
-
-  <div id="description" class="description">
-    
-  </div><!-- description -->
-
+<div id="documentation" class="description">
   
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
+<p>require File.expand_path(&#39;../lib/matrix_expansion/version&#39;,
+__FILE__)</p>
 
-    
+<p>Gem::Specification.new do |gem|</p>
 
-    
-    <!-- Constants -->
-    <section id="constants-list" class="section">
-      <h3 class="section-header">Constants</h3>
-      <dl>
-      
-        <dt id="VERSION">VERSION
-        
-        <dd class="description">
-        
-      
-      </dl>
-    </section>
-    
+<pre class="ruby"><span class="ruby-identifier">gem</span>.<span class="ruby-identifier">authors</span>       = [<span class="ruby-string">&quot;Teno Gonzalez Dos Santos / Albano Jose Yanes Reyes&quot;</span>]
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">email</span>         = [<span class="ruby-string">&quot;alu0100536829@ull.edu.es / alu0100457094@ull.edu.es&quot;</span>]
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">description</span>   = <span class="ruby-string">%q{Gema de matrices densas y dispersas}</span>
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">summary</span>       = <span class="ruby-string">%q{Matrices densas y dispersas.}</span>
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">homepage</span>      = <span class="ruby-string">&quot;https://github.com/alu01005368291/prct10.git&quot;</span>
 
-    
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">files</span>         = <span class="ruby-value">%xgit ls-files`</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">$\</span>)
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">executables</span>   = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">%r{^bin/}</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">f</span>) }
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">test_files</span>    = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">%r{^(test|spec|features)/}</span>)
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">name</span>          = <span class="ruby-string">&quot;matrix_expansion&quot;</span>
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">require_paths</span> = [<span class="ruby-string">&quot;lib&quot;</span>]
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">version</span>       = <span class="ruby-constant">MatrixExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
+</pre>
 
-    <!-- Methods -->
-    
-  </section><!-- 5Buntitled-5D -->
+<p>end</p>
 
-</div><!-- documentation -->
+</div>
+
 
 
 <footer id="validator-badges">

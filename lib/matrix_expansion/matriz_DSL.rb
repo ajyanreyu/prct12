@@ -11,12 +11,11 @@
 #          <b>Diseñar y desarrollar un <em>DSL</em> interno para trabajar con matrices.</b>
 #          <b>Utilizar Gemnasium para comprobar las dependencias de la aplicación desarrollada.</b>
 #
-#  === Modulo Operationes
-#           Para el manejo de las operaciones de las matrices
-#  === Modulo Output 
-#           Para el manejo de las salidas
 #  === Clase matriz_DSL
 #        Definicion de la clase Matriz_DSL compuesta por:
+#          - def operand (matriz)
+#          - def option(opcion)
+#          - def ejecucion
 #
 
 require "./lib/matrix_expansion/matrix.rb"

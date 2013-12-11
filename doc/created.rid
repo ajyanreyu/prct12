@@ -1,15 +1,18 @@
-Wed, 11 Dec 2013 04:52:39 -0500
-./test/tc_matrix.rb	Tue, 10 Dec 2013 14:13:26 -0500
-./Guardfile	Tue, 10 Dec 2013 14:13:26 -0500
-./Rakefile	Tue, 10 Dec 2013 14:13:26 -0500
-./LICENSE	Tue, 10 Dec 2013 14:13:26 -0500
-./Gemfile	Tue, 10 Dec 2013 14:13:26 -0500
-./spec/matrix_spec.rb	Tue, 10 Dec 2013 18:38:13 -0500
-./lib/matrix_expansion/matrix_densa.rb	Tue, 10 Dec 2013 17:10:34 -0500
-./lib/matrix_expansion/version.rb	Tue, 10 Dec 2013 14:13:26 -0500
-./lib/matrix_expansion/gcd.rb	Tue, 10 Dec 2013 14:13:26 -0500
-./lib/matrix_expansion/fraccion.rb	Tue, 10 Dec 2013 14:13:26 -0500
-./lib/matrix_expansion/matrix.rb	Tue, 10 Dec 2013 14:13:26 -0500
-./lib/matrix_expansion/matrix_dispersa.rb	Tue, 10 Dec 2013 14:13:26 -0500
-./lib/matrix_expansion/matriz_DSL.rb	Tue, 10 Dec 2013 18:55:21 -0500
-./lib/matrix_expansion.rb	Tue, 10 Dec 2013 18:25:27 -0500
+Wed, 11 Dec 2013 11:01:38 +0000
+./README.md	Wed, 11 Dec 2013 10:52:20 +0000
+./doc/created.rid	Wed, 11 Dec 2013 11:01:38 +0000
+./Guardfile	Wed, 11 Dec 2013 10:52:20 +0000
+./spec/matrix_spec.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./test/tc_matrix.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion/gcd.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion/matrix.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion/fraccion.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion/matrix_densa.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion/matrix_dispersa.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion/matriz_DSL.rb	Wed, 11 Dec 2013 10:54:28 +0000
+./lib/matrix_expansion/version.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./lib/matrix_expansion.rb	Wed, 11 Dec 2013 10:52:20 +0000
+./Rakefile	Wed, 11 Dec 2013 10:52:20 +0000
+./LICENSE	Wed, 11 Dec 2013 10:52:20 +0000
+./Gemfile	Wed, 11 Dec 2013 10:52:20 +0000
+./matrix_expansion.gemspec	Wed, 11 Dec 2013 10:52:20 +0000

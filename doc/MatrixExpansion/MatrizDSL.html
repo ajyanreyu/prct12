@@ -43,6 +43,8 @@
 </nav>
 
 
+  
+
   <div id="file-metadata">
     <nav id="file-list-section" class="section">
   <h3 class="section-header">Defined In</h3>
@@ -64,19 +66,20 @@
 </nav>
 
     
+    
     <!-- Method Quickref -->
 <nav id="method-list-section" class="section">
   <h3 class="section-header">Methods</h3>
 
   <ul class="link-list">
     
-    <li><a href="#method-c-new">::new</a>
+    <li ><a href="#method-c-new">::new</a>
     
-    <li><a href="#method-i-ejecucion">#ejecucion</a>
+    <li ><a href="#method-i-ejecucion">#ejecucion</a>
     
-    <li><a href="#method-i-operand">#operand</a>
+    <li ><a href="#method-i-operand">#operand</a>
     
-    <li><a href="#method-i-option">#option</a>
+    <li ><a href="#method-i-option">#option</a>
     
   </ul>
 </nav>
@@ -95,7 +98,13 @@
   
     <li class="file"><a href="../LICENSE.html">LICENSE</a>
   
+    <li class="file"><a href="../README_md.html">README</a>
+  
     <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../matrix_expansion_gemspec.html">matrix_expansion.gemspec</a>
   
   </ul>
 </nav>
@@ -104,6 +113,8 @@
   <h3 class="section-header">Class and Module Index</h3>
 
   <ul class="link-list">
+  
+    <li><a href="../Fraccion.html">Fraccion</a>
   
     <li><a href="../MatrixExpansion.html">MatrixExpansion</a>
   
@@ -114,8 +125,6 @@
     <li><a href="../MatrixExpansion/Matriz_Densa.html">MatrixExpansion::Matriz_Densa</a>
   
     <li><a href="../MatrixExpansion/Matriz_Dispersa.html">MatrixExpansion::Matriz_Dispersa</a>
-  
-    <li><a href="../Fraccion.html">Fraccion</a>
   
     <li><a href="../Object.html">Object</a>
   
@@ -177,7 +186,9 @@
         <div class="method-heading">
           <span class="method-name">new</span><span
             class="method-args">(op_type) { |self| ... }</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -187,12 +198,13 @@
 operaciones matrices. Se le pasan por parámetro el tipo de operacion y un
 bloque con el resto de opciones y operandos.</p>
           
+          
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 30</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">op_type</span>, &amp;<span class="ruby-identifier">block</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">op_type</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">op_type</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Tipo invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">op_type</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
     
     <span class="ruby-ivar">@operands</span> = []      <span class="ruby-comment"># Aquí se almacenan los operandos, es decir, las matrices</span>
     <span class="ruby-ivar">@result_mode</span> = <span class="ruby-value">:correccion_auto</span>     <span class="ruby-comment"># modo para mostrar el resultado</span>
@@ -218,7 +230,7 @@ bloque con el resto de opciones y operandos.</p>
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">arity</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
             <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
         <span class="ruby-keyword">else</span>
-            <span class="ruby-identifier">instance_eval</span> &amp;<span class="ruby-identifier">block</span> 
+            <span class="ruby-identifier">instance_eval</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> 
         <span class="ruby-keyword">end</span>
     <span class="ruby-keyword">end</span>
     
@@ -245,7 +257,9 @@ bloque con el resto de opciones y operandos.</p>
         <div class="method-heading">
           <span class="method-name">ejecucion</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -254,14 +268,15 @@ bloque con el resto de opciones y operandos.</p>
           <p>Método que implementa las diferentes operaciones posibles en sus diferentes
 modos de ejecución.</p>
           
+          
 
           
           <div class="method-source-code" id="ejecucion-source">
-            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 96</span>
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 95</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">ejecucion</span>
     <span class="ruby-keyword">case</span> <span class="ruby-ivar">@operation</span>
         <span class="ruby-keyword">when</span> <span class="ruby-value">:mostrar</span>
-            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">'ERROR en el numero de operandos'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">&#39;ERROR en el numero de operandos&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
             
             <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@operands</span>[<span class="ruby-value">0</span>] <span class="ruby-comment"># Matriz densa</span>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dispersa</span>)
@@ -275,11 +290,11 @@ modos de ejecución.</p>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:console</span>)
                 <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>
             <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:file</span>)
-                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'resultado.txt'</span>, <span class="ruby-string">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;resultado.txt&#39;</span>, <span class="ruby-string">&#39;w&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
             <span class="ruby-keyword">end</span>
             
         <span class="ruby-keyword">when</span> <span class="ruby-value">:suma</span>
-            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">'ERROR en el numero de operandos'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">&#39;ERROR en el numero de operandos&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
             
             <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@operands</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@operands</span>[<span class="ruby-value">1</span>] <span class="ruby-comment"># Matriz densa</span>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dispersa</span> <span class="ruby-keyword">or</span> (<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:correccion_auto</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0.6</span>))
@@ -289,11 +304,11 @@ modos de ejecución.</p>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:console</span>)
                 <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>
             <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:file</span>)
-                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'resultado.txt'</span>, <span class="ruby-string">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;resultado.txt&#39;</span>, <span class="ruby-string">&#39;w&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
             <span class="ruby-keyword">end</span>
             
         <span class="ruby-keyword">when</span> <span class="ruby-value">:resta</span>
-            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">'ERROR en el numero de operandos'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">&#39;ERROR en el numero de operandos&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
             
             <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@operands</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">-</span> <span class="ruby-ivar">@operands</span>[<span class="ruby-value">1</span>] <span class="ruby-comment"># Matriz densa</span>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dispersa</span> <span class="ruby-keyword">or</span> (<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:correccion_auto</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0.6</span>))
@@ -303,13 +318,13 @@ modos de ejecución.</p>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:console</span>)
                 <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>
             <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:file</span>)
-                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'resultado.txt'</span>, <span class="ruby-string">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;resultado.txt&#39;</span>, <span class="ruby-string">&#39;w&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
             <span class="ruby-keyword">end</span>
             
         <span class="ruby-keyword">when</span> <span class="ruby-value">:producto</span>
-            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">'ERROR en el numero de operandos'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span> , <span class="ruby-string">&#39;ERROR en el numero de operandos&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@operands</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
             
-            <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@operands</span>[<span class="ruby-value">0</span>] * <span class="ruby-ivar">@operands</span>[<span class="ruby-value">1</span>] <span class="ruby-comment"># Matriz densa</span>
+            <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@operands</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">*</span> <span class="ruby-ivar">@operands</span>[<span class="ruby-value">1</span>] <span class="ruby-comment"># Matriz densa</span>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dispersa</span> <span class="ruby-keyword">or</span> (<span class="ruby-ivar">@result_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:correccion_auto</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0.6</span>))
                 <span class="ruby-ivar">@result</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">densa_a_dispersa</span>(<span class="ruby-ivar">@result</span>)
             <span class="ruby-keyword">end</span>
@@ -317,7 +332,7 @@ modos de ejecución.</p>
             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:console</span>)
                 <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>
             <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:file</span>)
-                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'resultado.txt'</span>, <span class="ruby-string">'w'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&#39;resultado.txt&#39;</span>, <span class="ruby-string">&#39;w&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@result</span>.<span class="ruby-identifier">to_s</span>) }
             <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">else</span>
             <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Opcion incorrecta&quot;</span>, <span class="ruby-ivar">@operation</span>
@@ -338,7 +353,9 @@ modos de ejecución.</p>
         <div class="method-heading">
           <span class="method-name">operand</span><span
             class="method-args">(matriz)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -346,12 +363,13 @@ modos de ejecución.</p>
           
           <p>Método que recoge los operandos pasados (matrices)</p>
           
+          
 
           
           <div class="method-source-code" id="operand-source">
-            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 66</span>
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">operand</span> (<span class="ruby-identifier">matriz</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Tipo invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
   
     <span class="ruby-ivar">@operands</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">matriz</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -370,7 +388,9 @@ modos de ejecución.</p>
         <div class="method-heading">
           <span class="method-name">option</span><span
             class="method-args">(opcion)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -378,12 +398,13 @@ modos de ejecución.</p>
           
           <p>Método que asigna la opción seleccionada</p>
           
+          
 
           
           <div class="method-source-code" id="option-source">
-            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 73</span>
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matriz_DSL.rb, line 72</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">option</span>(<span class="ruby-identifier">opcion</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opcion</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Tipo invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opcion</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
     <span class="ruby-identifier">opc</span> = <span class="ruby-identifier">opcion</span>.<span class="ruby-identifier">downcase</span>
   
     <span class="ruby-keyword">case</span> <span class="ruby-identifier">opc</span>
@@ -422,7 +443,7 @@ modos de ejecución.</p>
 
 <footer id="validator-badges">
   <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
   <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
 </footer>
 

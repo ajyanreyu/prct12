@@ -43,6 +43,8 @@
 </nav>
 
 
+  
+
   <div id="file-metadata">
     <nav id="file-list-section" class="section">
   <h3 class="section-header">Defined In</h3>
@@ -76,41 +78,42 @@
   </ul>
 </nav>
 
+    
     <!-- Method Quickref -->
 <nav id="method-list-section" class="section">
   <h3 class="section-header">Methods</h3>
 
   <ul class="link-list">
     
-    <li><a href="#method-c-new">::new</a>
+    <li ><a href="#method-c-new">::new</a>
     
-    <li><a href="#method-i-25">#%</a>
+    <li ><a href="#method-i-25">#%</a>
     
-    <li><a href="#method-i-2A">#*</a>
+    <li ><a href="#method-i-2A">#*</a>
     
-    <li><a href="#method-i-2B">#+</a>
+    <li ><a href="#method-i-2B">#+</a>
     
-    <li><a href="#method-i-2D">#-</a>
+    <li ><a href="#method-i-2D">#-</a>
     
-    <li><a href="#method-i-2D-40">#-@</a>
+    <li ><a href="#method-i-2D-40">#-@</a>
     
-    <li><a href="#method-i-2F">#/</a>
+    <li ><a href="#method-i-2F">#/</a>
     
-    <li><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
     
-    <li><a href="#method-i-abs">#abs</a>
+    <li ><a href="#method-i-abs">#abs</a>
     
-    <li><a href="#method-i-coerce">#coerce</a>
+    <li ><a href="#method-i-coerce">#coerce</a>
     
-    <li><a href="#method-i-denom">#denom</a>
+    <li ><a href="#method-i-denom">#denom</a>
     
-    <li><a href="#method-i-num">#num</a>
+    <li ><a href="#method-i-num">#num</a>
     
-    <li><a href="#method-i-reciprocal">#reciprocal</a>
+    <li ><a href="#method-i-reciprocal">#reciprocal</a>
     
-    <li><a href="#method-i-to_f">#to_f</a>
+    <li ><a href="#method-i-to_f">#to_f</a>
     
-    <li><a href="#method-i-to_s">#to_s</a>
+    <li ><a href="#method-i-to_s">#to_s</a>
     
   </ul>
 </nav>
@@ -129,7 +132,13 @@
   
     <li class="file"><a href="./LICENSE.html">LICENSE</a>
   
+    <li class="file"><a href="./README_md.html">README</a>
+  
     <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./matrix_expansion_gemspec.html">matrix_expansion.gemspec</a>
   
   </ul>
 </nav>
@@ -138,6 +147,8 @@
   <h3 class="section-header">Class and Module Index</h3>
 
   <ul class="link-list">
+  
+    <li><a href="./Fraccion.html">Fraccion</a>
   
     <li><a href="./MatrixExpansion.html">MatrixExpansion</a>
   
@@ -148,8 +159,6 @@
     <li><a href="./MatrixExpansion/Matriz_Densa.html">MatrixExpansion::Matriz_Densa</a>
   
     <li><a href="./MatrixExpansion/Matriz_Dispersa.html">MatrixExpansion::Matriz_Dispersa</a>
-  
-    <li><a href="./Fraccion.html">Fraccion</a>
   
     <li><a href="./Object.html">Object</a>
   
@@ -224,11 +233,14 @@
         <div class="method-heading">
           <span class="method-name">new</span><span
             class="method-args">(a,b)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
+          
           
           
           
@@ -266,13 +278,16 @@
         <div class="method-heading">
           <span class="method-name">%</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Resto de fracciones</p>
+          
           
 
           
@@ -301,7 +316,9 @@
         <div class="method-heading">
           <span class="method-name">*</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -309,13 +326,14 @@
           
           <p>Producto de fracciones</p>
           
+          
 
           
           <div class="method-source-code" id="2A-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/fraccion.rb, line 80</span>
-<span class="ruby-keyword">def</span> * (<span class="ruby-identifier">other</span>)
-        <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@a</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>
-        <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@b</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">other</span>)
+        <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@a</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>
+        <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@b</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
         <span class="ruby-identifier">a</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">k</span>
         <span class="ruby-identifier">b</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">k</span>
@@ -336,7 +354,9 @@
         <div class="method-heading">
           <span class="method-name">+</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -344,14 +364,15 @@
           
           <p>Suma de fracciones</p>
           
+          
 
           
           <div class="method-source-code" id="2B-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/fraccion.rb, line 44</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">other</span>)
-        <span class="ruby-identifier">comun</span> = <span class="ruby-ivar">@b</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
-        <span class="ruby-identifier">a1</span> = <span class="ruby-ivar">@a</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
-        <span class="ruby-identifier">a2</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> * <span class="ruby-ivar">@b</span>
+        <span class="ruby-identifier">comun</span> = <span class="ruby-ivar">@b</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">a1</span> = <span class="ruby-ivar">@a</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">a2</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@b</span>
         <span class="ruby-identifier">a3</span> = <span class="ruby-identifier">a1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">a2</span>
         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">a3</span>,<span class="ruby-identifier">comun</span>)
         <span class="ruby-identifier">a3</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">k</span>
@@ -373,7 +394,9 @@
         <div class="method-heading">
           <span class="method-name">-</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -381,14 +404,15 @@
           
           <p>Resta de fracciones</p>
           
+          
 
           
           <div class="method-source-code" id="2D-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/fraccion.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">other</span>)
-        <span class="ruby-identifier">comun</span> = <span class="ruby-ivar">@b</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
-        <span class="ruby-identifier">a1</span> = <span class="ruby-ivar">@a</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
-        <span class="ruby-identifier">a2</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> * <span class="ruby-ivar">@b</span>
+        <span class="ruby-identifier">comun</span> = <span class="ruby-ivar">@b</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">a1</span> = <span class="ruby-ivar">@a</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">a2</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@b</span>
         <span class="ruby-identifier">a3</span> = <span class="ruby-identifier">a1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">a2</span>
         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">a3</span>,<span class="ruby-identifier">comun</span>)
         <span class="ruby-identifier">a3</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">k</span>
@@ -410,13 +434,16 @@
         <div class="method-heading">
           <span class="method-name">-@</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Opuesto de fracción. La suma de una fracción y su opuesto debe ser 0.</p>
+          
           
 
           
@@ -447,7 +474,9 @@
         <div class="method-heading">
           <span class="method-name">/</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
@@ -455,13 +484,14 @@
           
           <p>División de fracciones</p>
           
+          
 
           
           <div class="method-source-code" id="2F-source">
             <pre><span class="ruby-comment"># File lib/matrix_expansion/fraccion.rb, line 90</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">other</span>)
-        <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@a</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
-        <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@b</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>
+        <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@a</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denom</span>
+        <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@b</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>
         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>)
         <span class="ruby-identifier">a</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">k</span>
         <span class="ruby-identifier">b</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">k</span>
@@ -482,11 +512,14 @@
         <div class="method-heading">
           <span class="method-name">&lt;=&gt;</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
+          
           
           
           
@@ -512,13 +545,16 @@
         <div class="method-heading">
           <span class="method-name">abs</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Fracción pasada a float. (ej: 1.25)</p>
+          
           
 
           
@@ -542,11 +578,14 @@
         <div class="method-heading">
           <span class="method-name">coerce</span><span
             class="method-args">(other)</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
+          
           
           
           
@@ -572,13 +611,16 @@
         <div class="method-heading">
           <span class="method-name">denom</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>metedo que retorna el denominador</p>
+          
           
 
           
@@ -602,13 +644,16 @@
         <div class="method-heading">
           <span class="method-name">num</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>metodo que retorna el numerador</p>
+          
           
 
           
@@ -632,13 +677,16 @@
         <div class="method-heading">
           <span class="method-name">reciprocal</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>Fracción reciproca o inversa (a/b -&gt; b/a)</p>
+          
           
 
           
@@ -662,13 +710,16 @@
         <div class="method-heading">
           <span class="method-name">to_f</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p><a href="Fraccion.html">Fraccion</a> en modo flotante</p>
+          
           
 
           
@@ -692,13 +743,16 @@
         <div class="method-heading">
           <span class="method-name">to_s</span><span
             class="method-args">()</span>
+          
           <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
 
         <div class="method-description">
           
           <p>formateo de la salida (a/b)</p>
+          
           
 
           
@@ -726,7 +780,7 @@
 
 <footer id="validator-badges">
   <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
   <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
 </footer>
 

@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>module MatrixExpansion - RDoc Documentation</title>
+<title>README - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body id="top" class="module">
+<body class="file">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -44,44 +44,18 @@
 
 
   
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-MatrixExpansion">MatrixExpansion</a>
+      <li><a href="#label-Introducci%C3%B3n">Introducción</a>
+      <li><a href="#label-Instalaci%C3%B3n">Instalación</a>
+      <li><a href="#label-Dise%C3%B1o">Diseño</a>
+    </ul>
+  </nav>
+</div>
 
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>lib/matrix_expansion.rb
-    <li>lib/matrix_expansion/matrix.rb
-    <li>lib/matrix_expansion/matrix_densa.rb
-    <li>lib/matrix_expansion/matrix_dispersa.rb
-    <li>lib/matrix_expansion/matriz_DSL.rb
-    <li>lib/matrix_expansion/version.rb
-    <li>spec/matrix_spec.rb
-    <li>test/tc_matrix.rb
-  </ul>
-</nav>
-
-    
-  </div>
-
-  <div id="class-metadata">
-    
-    
-    <!-- Included Modules -->
-<nav id="includes-section" class="section">
-  <h3 class="section-header">Included Modules</h3>
-
-  <ul class="link-list">
-  
-  
-    <li><span class="include">Enumerable</span>
-  
-  
-  </ul>
-</nav>
-
-    
-    
-  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -133,43 +107,47 @@
   </div>
 </nav>
 
-<div id="documentation">
-  <h1 class="module">module MatrixExpansion</h1>
-
-  <div id="description" class="description">
-    
-  </div><!-- description -->
-
+<div id="documentation" class="description">
   
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
+<h1 id="label-MatrixExpansion"><a href="MatrixExpansion.html">MatrixExpansion</a><span><a href="#label-MatrixExpansion">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
-    
+<h2 id="label-Introducci%C3%B3n">Introducción<span><a href="#label-Introducci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
-    
-    <!-- Constants -->
-    <section id="constants-list" class="section">
-      <h3 class="section-header">Constants</h3>
-      <dl>
-      
-        <dt id="VERSION">VERSION
-        
-        <dd class="description">
-        
-      
-      </dl>
-    </section>
-    
+<p>Gema que permite el uso de matrices densas y dispersas a través de la
+herencia de una matriz simple. Todas las operaciones con números y
+fracciones incluidas. Métodos realizados con programación funcional.
+Añadida clase que permite programar operaciones con matrices a través de un
+lenguaje DSL más manejable para matemáticos.</p>
 
-    
+<h2 id="label-Instalaci%C3%B3n">Instalación<span><a href="#label-Instalaci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
-    <!-- Methods -->
-    
-  </section><!-- 5Buntitled-5D -->
+<p>Add this line to your application&#39;s Gemfile:</p>
 
-</div><!-- documentation -->
+<pre>gem &#39;matrix_expansion&#39;</pre>
+
+<p>And then execute:</p>
+
+<pre>$ bundle</pre>
+
+<p>Or install it yourself as:</p>
+
+<pre>$ gem install matrix_expansion</pre>
+
+<h2 id="label-Dise%C3%B1o">Diseño<span><a href="#label-Dise%C3%B1o">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>A la hora de realizar las matrices densas se ha realizado de forma natural
+(como para cualquier matriz simple). El planteamiento importante es para la
+representación de las matrices dispersas. Hemos decidido finalmente, tras
+haber pensado en implementarlo con varios vectores, en que era más
+sencillo, tanto para el acceso como para las operaciones, implementarlo con
+un array de hash. Cada fila es un array que contiene hashes, donde la clave
+es la columna del elemento no nulo y el valor es el propio valor del
+elemento no nulo. De esta forma, solamente se almacenan los valores nulos.
+Si se accediera a otra posición se devolvería 0 (aunque este no este
+almacenado en la matriz dispersa para ahorrar memoria).</p>
+
+</div>
+
 
 
 <footer id="validator-badges">
